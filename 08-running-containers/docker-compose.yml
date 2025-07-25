@@ -13,6 +13,7 @@ services:
       - 5173:5173
   client-react-nginx:
     labels:
+      # shipyard.name: 'Client React Nginx'
       shipyard.primary-route: true
       shipyard.route: '/'
     image: client-react-nginx
@@ -27,6 +28,7 @@ services:
     restart: unless-stopped
   api-node:
     labels:
+      # shipyard.name: 'API Node.js'
       shipyard.route: '/api/node/'
       shipyard.route.rewrite: true
     image: api-node
@@ -46,6 +48,7 @@ services:
     restart: unless-stopped
   api-golang:
     labels:
+        # shipyard.name: 'API Golang'
       shipyard.route: '/api/golang/'
       shipyard.route.rewrite: true
     image: api-golang
